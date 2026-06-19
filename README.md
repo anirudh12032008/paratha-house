@@ -1,6 +1,9 @@
 # Paratha House — Website
 
-A single-page site for **Paratha House, Indiranagar (Kodihalli), Bengaluru**.
+A single-page site for **Paratha House, Domlur, Bengaluru**
+(267, Ground Floor, JK Golf View, Amarjyoti Layout, Domlur — 560071).
+Dishes, prices and details come from the restaurant's live Google listing
+(North Indian · Healthy Food, serves veg & non-veg, opens daily 11:30 AM, ★ 3.9).
 Pure front-end — no backend, no build step. Open `index.html` and it works.
 
 Styled with **Tailwind CSS** (loaded via the Play CDN in `index.html`, so there's

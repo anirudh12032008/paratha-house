@@ -1,8 +1,10 @@
 /* ============================================================
    Paratha House — Menu Data
-   Edit prices, names, descriptions and images here.
-   Images use Unsplash (royalty-free). Swap with your own
-   restaurant photos any time by replacing the `img` URL.
+   Dishes & prices sourced from the restaurant's live Google
+   listing. Prices marked "est." below are sensible estimates —
+   confirm and tweak with the restaurant.
+   Images use Unsplash (royalty-free); swap with your own
+   photos any time by replacing the `img` URL.
    ============================================================ */
 
 const MENU = [
@@ -11,12 +13,12 @@ const MENU = [
     note: "Hand-rolled, slow-cooked on the tawa with pure ghee",
     items: [
       {
-        name: "Aloo Paratha",
-        price: 90,
+        name: "Aloo Onion Paratha",
+        price: 100,
         veg: true,
         spicy: 1,
         tags: ["Bestseller"],
-        desc: "Soft whole-wheat flatbread stuffed with spiced mashed potatoes, fresh coriander and a hint of ajwain. Served with white butter, dahi and tangy pickle.",
+        desc: "The house favourite — whole-wheat flatbread stuffed with spiced potato and onion, griddled golden. Served with white butter, dahi and pickle.",
         img: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=900&q=80"
       },
       {
@@ -51,7 +53,7 @@ const MENU = [
         price: 120,
         veg: true,
         spicy: 2,
-        tags: ["Chef's Pick"],
+        tags: [],
         desc: "A wholesome medley of seasonal vegetables and paneer, seasoned with house masala. Comfort food at its finest.",
         img: "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=900&q=80"
       },
@@ -67,26 +69,26 @@ const MENU = [
     ]
   },
   {
-    category: "From the Tandoor",
+    category: "Breads & Tandoor",
     note: "Charred in our clay oven, brushed with ghee",
     items: [
+      {
+        name: "Garlic Naan with Butter",
+        price: 70,
+        veg: true,
+        spicy: 0,
+        tags: ["Bestseller"],
+        desc: "Fresh naan studded with roasted garlic and coriander, finished with a glossy brush of white butter. Fragrant and fluffy.",
+        img: "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=900&q=80"
+      },
       {
         name: "Butter Naan",
         price: 60,
         veg: true,
         spicy: 0,
         tags: [],
-        desc: "Pillowy leavened bread baked in the tandoor and finished with a glossy brush of white butter.",
+        desc: "Pillowy leavened bread baked in the tandoor and finished with a glossy brush of butter.",
         img: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=900&q=80"
-      },
-      {
-        name: "Garlic Naan",
-        price: 80,
-        veg: true,
-        spicy: 0,
-        tags: ["Bestseller"],
-        desc: "Fresh naan studded with roasted garlic and coriander — fragrant, fluffy and impossible to resist.",
-        img: "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=900&q=80"
       },
       {
         name: "Tandoori Roti",
@@ -96,114 +98,174 @@ const MENU = [
         tags: [],
         desc: "Rustic whole-wheat roti baked against the walls of the tandoor for that signature smoky char.",
         img: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80"
-      },
-      {
-        name: "Paneer Tikka",
-        price: 240,
-        veg: true,
-        spicy: 2,
-        tags: ["Chef's Pick"],
-        desc: "Thick cubes of cottage cheese marinated in spiced yoghurt, skewered with peppers and onions, and flame-grilled.",
-        img: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=80"
       }
     ]
   },
   {
-    category: "Curries & Sabzi",
-    note: "Slow-simmered gravies to scoop up with every bite",
+    category: "Veg Mains & Rice",
+    note: "Slow-simmered gravies and comforting rice",
     items: [
+      {
+        name: "Paneer Lababdar",
+        price: 150,
+        veg: true,
+        spicy: 2,
+        tags: ["Chef's Pick"],
+        desc: "Cottage cheese in a luscious, mildly sweet tomato-onion gravy enriched with cream and crushed kasuri methi.",
+        img: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Bhindi Fry",
+        price: 100,
+        veg: true,
+        spicy: 2,
+        tags: [],
+        desc: "Crisp okra tossed with onions and dry spices — light, tangy and addictive alongside any paratha.",
+        img: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Veg Biryani",
+        price: 180,
+        veg: true,
+        spicy: 2,
+        tags: ["Bestseller"],
+        desc: "Fragrant basmati layered with vegetables and whole spices, dum-cooked and served with raita.",
+        img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=900&q=80"
+      },
       {
         name: "Dal Makhani",
         price: 220,
         veg: true,
         spicy: 1,
-        tags: ["Bestseller"],
-        desc: "Black urad dal simmered overnight with tomato, butter and cream until velvety and rich. The soul of any paratha meal.",
+        tags: [],
+        desc: "Black urad dal simmered overnight with tomato, butter and cream until velvety and rich.",
         img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80"
       },
       {
-        name: "Paneer Butter Masala",
-        price: 260,
+        name: "Curd Rice",
+        price: 125,
         veg: true,
+        spicy: 0,
+        tags: [],
+        desc: "Soft rice folded into cool, creamy curd with a tempering of mustard, curry leaves and ginger. The perfect cooling finish.",
+        img: "https://images.unsplash.com/photo-1571212515416-fef01fc43637?auto=format&fit=crop&w=900&q=80"
+      }
+    ]
+  },
+  {
+    category: "Non-Veg Specials",
+    note: "From the tandoor and the kadhai",
+    items: [
+      {
+        name: "Chicken Tikka Kebab",
+        price: 240,
+        veg: false,
         spicy: 2,
         tags: ["Chef's Pick"],
-        desc: "Cottage cheese in a luscious tomato-cashew gravy kissed with fenugreek and butter. Mildly sweet, gloriously creamy.",
-        img: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=80"
+        desc: "Boneless chicken marinated in spiced yoghurt and ginger-garlic, skewered and flame-grilled until smoky and tender.",
+        img: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=900&q=80"
       },
       {
-        name: "Chana Masala",
-        price: 180,
-        veg: true,
+        name: "Seekh Kabab",
+        price: 240,
+        veg: false,
         spicy: 2,
         tags: [],
-        desc: "Chickpeas slow-cooked in a robust onion-tomato masala with whole spices. Hearty, tangy and full of punch.",
-        img: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=80"
+        desc: "Minced meat kneaded with herbs and spices, hand-pressed onto skewers and char-grilled. Juicy and full of flavour.",
+        img: "https://images.unsplash.com/photo-1602273660127-a0000560a4c1?auto=format&fit=crop&w=900&q=80"
       },
       {
-        name: "Mix Veg Curry",
-        price: 200,
+        name: "Drums of Heaven",
+        price: 220,
+        veg: false,
+        spicy: 3,
+        tags: [],
+        desc: "Chicken lollipops tossed in a fiery, glossy Indo-Chinese sauce. A crowd-pleasing starter with a kick.",
+        img: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Bathinda Chicken",
+        price: 260,
+        veg: false,
+        spicy: 3,
+        tags: ["House Special"],
+        desc: "A robust Punjabi-style chicken curry simmered with onions, tomatoes and freshly ground spices. Bold and hearty.",
+        img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80"
+      }
+    ]
+  },
+  {
+    category: "Starters & Salads",
+    note: "Crunchy, fresh and light to begin",
+    items: [
+      {
+        name: "Masala Papad",
+        price: 50,
         veg: true,
         spicy: 1,
         tags: [],
-        desc: "Garden vegetables in a lightly spiced, home-style gravy — the kind of sabzi you grew up on.",
+        desc: "Crisp roasted papad topped with chopped onion, tomato, coriander and a sprinkle of chaat masala.",
+        img: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Pani Puri",
+        price: 70,
+        veg: true,
+        spicy: 2,
+        tags: [],
+        desc: "Crisp hollow puris filled with spiced potato and tangy, minty pani. A burst of flavour in every bite.",
+        img: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Cobb Salad",
+        price: 180,
+        veg: false,
+        spicy: 0,
+        tags: [],
+        desc: "A hearty bowl of greens, grilled chicken, egg and crisp veg — a wholesome, protein-packed option.",
+        img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Vital Green Salad",
+        price: 160,
+        veg: true,
+        spicy: 0,
+        tags: ["Healthy"],
+        desc: "A crisp, refreshing mix of seasonal greens and vegetables with a light citrus dressing.",
         img: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=900&q=80"
       }
     ]
   },
   {
-    category: "Sides & Accompaniments",
-    note: "The little things that make the meal",
+    category: "Lassi & Desserts",
+    note: "A sweet, cooling finish",
     items: [
       {
-        name: "Dahi (Curd)",
-        price: 50,
-        veg: true,
-        spicy: 0,
-        tags: [],
-        desc: "Thick, freshly set curd — cool, creamy and the perfect foil to a hot paratha.",
-        img: "https://images.unsplash.com/photo-1571212515416-fef01fc43637?auto=format&fit=crop&w=900&q=80"
-      },
-      {
-        name: "Boondi Raita",
-        price: 80,
-        veg: true,
-        spicy: 0,
-        tags: [],
-        desc: "Whisked yoghurt with soft boondi, roasted cumin and a sprinkle of chaat masala.",
-        img: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=80"
-      },
-      {
-        name: "Green Salad",
-        price: 70,
-        veg: true,
-        spicy: 0,
-        tags: [],
-        desc: "Crisp cucumber, onion, tomato and carrot with a squeeze of lemon and a dash of black salt.",
-        img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80"
-      }
-    ]
-  },
-  {
-    category: "Sweets & Drinks",
-    note: "A sweet finish, the Punjabi way",
-    items: [
-      {
-        name: "Sweet Lassi",
-        price: 90,
+        name: "Sweet Lassi (220 ml)",
+        price: 60,
         veg: true,
         spicy: 0,
         tags: ["Bestseller"],
-        desc: "Thick, hand-churned yoghurt blended with sugar and topped with a dollop of malai. Served chilled in a tall glass.",
+        desc: "Thick, hand-churned yoghurt blended with sugar and topped with malai. Served chilled in a tall glass.",
         img: "https://images.unsplash.com/photo-1626197031507-c17099753214?auto=format&fit=crop&w=900&q=80"
       },
       {
-        name: "Masala Chai",
-        price: 40,
+        name: "Mint Lassi",
+        price: 119,
         veg: true,
         spicy: 0,
         tags: [],
-        desc: "Strong, milky tea brewed with cardamom, ginger and clove. The perfect end to your meal.",
-        img: "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=900&q=80"
+        desc: "A refreshing twist on the classic — creamy lassi whirled with fresh mint for a cool, herby lift.",
+        img: "https://images.unsplash.com/photo-1626197031507-c17099753214?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Pista Ice Cream",
+        price: 90,
+        veg: true,
+        spicy: 0,
+        tags: [],
+        desc: "Creamy pistachio ice cream — a nutty, fragrant way to end the meal.",
+        img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80"
       },
       {
         name: "Gulab Jamun",
