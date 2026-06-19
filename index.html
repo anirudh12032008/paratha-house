@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paratha House · Indiranagar, Bengaluru — Home-style North Indian</title>
+  <meta name="description" content="Paratha House, Indiranagar — hand-rolled parathas, slow-cooked curries and pure-ghee goodness, served the way home does it. Kodihalli, Bengaluru." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:     "#fbf4e9",
+            creamdeep: "#f3e6d2",
+            paper:     "#fffaf2",
+            ink:       "#2c1d12",
+            inksoft:   "#6b5544",
+            terracotta:"#c5562b",
+            terradark: "#ad4621",
+            saffron:   "#e08a1e",
+            ghee:      "#e9b949",
+            olive:     "#5b6b3a",
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans:  ['Manrope', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: "0 4px 18px rgba(58,33,12,.10)",
+            md2:  "0 18px 50px rgba(58,33,12,.18)",
+            lg2:  "0 40px 90px rgba(58,33,12,.30)",
+            glow: "0 10px 30px rgba(197,86,43,.45)",
+          },
+          keyframes: {
+            heroZoom:   { "0%": { transform: "scale(1.08)" }, "100%": { transform: "scale(1.2) translateY(-2%)" } },
+            marquee:    { to: { transform: "translateX(-50%)" } },
+            shimmer:    { "0%,100%": { backgroundPosition: "0% 50%" }, "50%": { backgroundPosition: "100% 50%" } },
+            float:      { "0%,100%": { transform: "translateY(0) rotate(-8deg)" }, "50%": { transform: "translateY(-12px) rotate(-4deg)" } },
+            floatSlow:  { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-18px)" } },
+            scrollPulse:{ "0%,100%": { opacity: ".3", transform: "scaleY(.6)" }, "50%": { opacity: "1", transform: "scaleY(1)" } },
+          },
+          animation: {
+            heroZoom:   "heroZoom 18s ease-in-out infinite alternate",
+            marquee:    "marquee 28s linear infinite",
+            shimmer:    "shimmer 6s ease infinite",
+            float:      "float 6s ease-in-out infinite",
+            floatSlow:  "floatSlow 7s ease-in-out infinite",
+            scrollPulse:"scrollPulse 2s ease-in-out infinite",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-cream text-ink font-sans text-[17px] leading-relaxed antialiased overflow-x-hidden selection:bg-ghee selection:text-ink">
+
+  <!-- ===================== NAV ===================== -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 flex items-center justify-between gap-4 px-5 md:px-10 py-4 transition-all duration-500">
+    <a href="#home" class="flex items-center gap-2.5 group">
+      <span class="grid place-items-center w-[42px] h-[42px] rounded-xl bg-terracotta text-white font-serif font-semibold text-[1.05rem] shadow-soft transition-transform duration-500 group-hover:rotate-6">PH</span>
+      <span data-navname class="font-serif font-semibold text-[1.25rem] tracking-tight">Paratha House</span>
+    </a>
+    <nav data-navlinks class="hidden md:flex gap-8">
+      <a href="#about" class="navlink relative font-semibold text-[.95rem]">Our Story</a>
+      <a href="#signatures" class="navlink relative font-semibold text-[.95rem]">Signatures</a>
+      <a href="#visit" class="navlink relative font-semibold text-[.95rem]">Visit</a>
+    </nav>
+    <button data-open-menu class="btn-magnetic group relative overflow-hidden rounded-full bg-ink text-cream font-semibold text-[.95rem] px-6 py-3 transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5">
+      <span class="relative z-10">View Menu</span>
+      <span class="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-terracotta transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)]"></span>
+    </button>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="relative min-h-[100svh] flex items-center px-5 sm:px-10 lg:px-24 pt-28 pb-16 overflow-hidden">
+    <div data-parallax class="absolute inset-0 bg-cover bg-center animate-heroZoom"
+         style="background-image:url('https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=2000&q=80')"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(120%_90%_at_18%_30%,rgba(35,18,8,.55),transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[rgba(28,15,6,.66)] via-[rgba(28,15,6,.42)] to-[rgba(28,15,6,.85)]"></div>
+
+    <!-- floating decorative spice rings -->
+    <div class="pointer-events-none absolute top-[18%] right-[10%] w-40 h-40 rounded-full border border-ghee/20 animate-floatSlow hidden md:block"></div>
+    <div class="pointer-events-none absolute bottom-[16%] right-[22%] w-24 h-24 rounded-full border border-ghee/10 animate-float hidden md:block"></div>
+
+    <div class="relative max-w-3xl text-white">
+      <p data-rise class="eyebrow text-ghee">Indiranagar · Bengaluru · Since the family recipe began</p>
+      <h1 class="font-serif font-medium leading-[1.02] tracking-[-.02em] text-[clamp(2.6rem,7.5vw,5.4rem)] mt-4 mb-6 drop-shadow-[0_4px_30px_rgba(0,0,0,.35)]">
+        <span data-rise data-rise-d="80" class="block">Rolled by hand.</span>
+        <span data-rise data-rise-d="200" class="block italic bg-gradient-to-r from-ghee via-saffron to-ghee bg-[length:200%_auto] bg-clip-text text-transparent animate-shimmer">Cooked with ghee.</span>
+        <span data-rise data-rise-d="320" class="block">Served with love.</span>
+      </h1>
+      <p data-rise data-rise-d="440" class="text-[clamp(1.02rem,2vw,1.22rem)] max-w-[30em] text-white/90 mb-9">
+        A little corner of Punjab in Kodihalli — where the tawa never rests and every paratha comes with a side of warmth.
+      </p>
+      <div data-rise data-rise-d="560" class="flex flex-wrap gap-3.5">
+        <button data-open-menu class="btn-magnetic group relative overflow-hidden rounded-full bg-terracotta text-white font-semibold text-[1.02rem] px-8 py-4 shadow-glow transition-all duration-300 hover:-translate-y-0.5">
+          <span class="relative z-10">Explore the Menu</span>
+          <span class="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-terradark transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)]"></span>
+        </button>
+        <a href="#visit" class="rounded-full border border-white/45 text-white font-semibold text-[1.02rem] px-8 py-4 transition-all duration-300 hover:border-white hover:bg-white/10 hover:-translate-y-0.5">Find Us</a>
+      </div>
+      <div data-rise data-rise-d="680" class="flex flex-wrap items-center gap-2.5 mt-10 text-[.9rem] text-white/85">
+        <span>★ 4.5 · loved by the neighbourhood</span><span class="opacity-40">·</span>
+        <span>Open daily till 11 PM</span><span class="opacity-40">·</span>
+        <span>Pure Veg</span>
+      </div>
+    </div>
+
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2.5 text-white/70 text-[.68rem] tracking-[.3em] uppercase">
+      <span>scroll</span>
+      <span class="w-px h-10 bg-gradient-to-b from-white/80 to-transparent animate-scrollPulse origin-top"></span>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="bg-ink text-cream py-4 overflow-hidden whitespace-nowrap">
+    <div class="inline-flex items-center gap-8 font-serif italic text-2xl animate-marquee">
+      <span>Aloo Paratha</span><span class="text-ghee not-italic">✶</span>
+      <span>Paneer Paratha</span><span class="text-ghee not-italic">✶</span>
+      <span>Dal Makhani</span><span class="text-ghee not-italic">✶</span>
+      <span>Garlic Naan</span><span class="text-ghee not-italic">✶</span>
+      <span>Sweet Lassi</span><span class="text-ghee not-italic">✶</span>
+      <span>Gulab Jamun</span><span class="text-ghee not-italic">✶</span>
+      <span>Aloo Paratha</span><span class="text-ghee not-italic">✶</span>
+      <span>Paneer Paratha</span><span class="text-ghee not-italic">✶</span>
+      <span>Dal Makhani</span><span class="text-ghee not-italic">✶</span>
+      <span>Garlic Naan</span><span class="text-ghee not-italic">✶</span>
+      <span>Sweet Lassi</span><span class="text-ghee not-italic">✶</span>
+      <span>Gulab Jamun</span><span class="text-ghee not-italic">✶</span>
+    </div>
+  </div>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="grid md:grid-cols-2 gap-10 lg:gap-24 items-center max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-32">
+    <div data-reveal class="relative min-h-[460px] max-w-[460px] mx-auto md:mx-0 w-full">
+      <div class="absolute inset-y-0 left-0 right-[28%] bottom-[22%] rounded-[28px] bg-cover bg-center shadow-md2 z-10 transition-transform duration-700 hover:scale-[1.02]"
+           style="background-image:url('https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=1000&q=80')"></div>
+      <div class="absolute right-0 bottom-0 w-[58%] h-[58%] rounded-[28px] bg-cover bg-center border-8 border-cream shadow-md2 z-20 transition-transform duration-700 hover:scale-[1.03]"
+           style="background-image:url('https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=80')"></div>
+      <div class="absolute -top-3 right-[6%] z-30 grid place-items-center text-center w-[132px] h-[132px] rounded-full bg-ghee text-ink shadow-md2 animate-float">
+        <div>
+          <span class="block font-serif text-[1.7rem] font-semibold leading-none">100%</span>
+          <span class="block text-[.72rem] font-semibold leading-tight mt-1">Pure ghee<br />& fresh atta</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p data-reveal class="eyebrow text-terracotta">Our Story</p>
+      <h2 data-reveal class="section-title">A family kitchen that<br />grew a few more tables.</h2>
+      <p data-reveal class="text-inksoft mb-[1.1rem]">Paratha House began the way the best things do — at home, with a rolling pin, a hot tawa and a recipe handed down through generations. What started as feeding the family became feeding the neighbourhood.</p>
+      <p data-reveal class="text-inksoft mb-[1.1rem]">Tucked into Ramaiah Street in Kodihalli, we keep things honest: whole-wheat atta kneaded fresh each morning, vegetables chopped by hand, and ghee that we'd happily put in front of our own grandmother. No shortcuts. Just the food we grew up loving.</p>
+      <div data-reveal class="flex flex-wrap gap-2.5 mt-6">
+        <span class="pill">Hand-rolled daily</span>
+        <span class="pill">Home-style recipes</span>
+        <span class="pill">North Indian · Punjabi</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SIGNATURES ===================== -->
+  <section id="signatures" class="bg-creamdeep py-20 md:py-28 px-5 sm:px-8">
+    <div class="max-w-6xl mx-auto mb-12">
+      <p data-reveal class="eyebrow text-terracotta">What the regulars order</p>
+      <h2 data-reveal class="section-title">The ones we're<br />known for.</h2>
+      <p data-reveal class="max-w-[38em] text-inksoft mb-6">A taste of the menu. Tap “View Menu” for the full spread — every dish opens up with its own photo and story.</p>
+      <button data-reveal data-open-menu class="btn-magnetic group relative overflow-hidden rounded-full bg-terracotta text-white font-semibold px-6 py-3 shadow-glow transition-all duration-300 hover:-translate-y-0.5">
+        <span class="relative z-10">See full menu</span>
+        <span class="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-terradark transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)]"></span>
+      </button>
+    </div>
+    <div id="signature-grid" class="max-w-6xl mx-auto grid gap-6 [grid-template-columns:repeat(auto-fill,minmax(270px,1fr))]"></div>
+  </section>
+
+  <!-- ===================== VISIT ===================== -->
+  <section id="visit" class="py-20 md:py-28 px-5 sm:px-8">
+    <div data-reveal class="max-w-6xl mx-auto grid md:grid-cols-2 bg-paper border border-ink/10 rounded-[28px] overflow-hidden shadow-md2">
+      <div class="p-8 lg:p-14">
+        <p class="eyebrow text-terracotta">Come say hello</p>
+        <h2 class="section-title">Visit Paratha House</h2>
+        <ul class="list-none my-6">
+          <li class="grid grid-cols-[90px_1fr] gap-4 py-4 border-t border-ink/10">
+            <span class="visit-label">Address</span>
+            <span class="text-inksoft">144, Ramaiah Street, Above Gurukrupa,<br />ISRO Colony, Kodihalli, Indiranagar,<br />Bengaluru — 560008</span>
+          </li>
+          <li class="grid grid-cols-[90px_1fr] gap-4 py-4 border-t border-ink/10">
+            <span class="visit-label">Hours</span>
+            <span class="text-inksoft">Open daily · 11:00 AM – 11:00 PM</span>
+          </li>
+          <li class="grid grid-cols-[90px_1fr] gap-4 py-4 border-y border-ink/10">
+            <span class="visit-label">Phone</span>
+            <span class="text-inksoft"><a href="tel:+910000000000" class="text-ink font-semibold no-underline">+91 00000 00000</a> <em class="not-italic text-[.8rem] opacity-60">(update me)</em></span>
+          </li>
+        </ul>
+        <div class="flex flex-wrap gap-3">
+          <a class="rounded-full bg-terracotta text-white font-semibold px-6 py-3 transition-all duration-300 hover:bg-terradark hover:-translate-y-0.5" href="https://www.google.com/maps/search/?api=1&query=Paratha+House+Ramaiah+Street+Kodihalli+Bengaluru" target="_blank" rel="noopener">Get Directions</a>
+          <a class="rounded-full border border-ink/15 font-semibold px-6 py-3 transition-all duration-300 hover:border-ink hover:-translate-y-0.5" href="#" data-order>Order on Swiggy</a>
+          <a class="rounded-full border border-ink/15 font-semibold px-6 py-3 transition-all duration-300 hover:border-ink hover:-translate-y-0.5" href="#" data-order>Order on Zomato</a>
+        </div>
+        <p class="mt-4 text-[.78rem] text-inksoft/70">↑ Order links are placeholders — drop in your Swiggy &amp; Zomato URLs in <code class="bg-creamdeep px-1.5 py-0.5 rounded">index.html</code>.</p>
+      </div>
+      <div class="min-h-[300px] md:min-h-full order-first md:order-last">
+        <iframe title="Paratha House location map"
+          class="w-full h-full min-h-[300px] border-0 [filter:saturate(.9)_contrast(1.02)]"
+          src="https://www.google.com/maps?q=Ramaiah+Street+Kodihalli+Bengaluru&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-ink text-cream text-center px-6 py-14">
+    <div class="inline-flex items-center gap-2.5 mb-4">
+      <span class="grid place-items-center w-[54px] h-[54px] rounded-xl bg-terracotta text-white font-serif font-semibold text-[1.3rem]">PH</span>
+      <span class="font-serif font-semibold text-[1.25rem]">Paratha House</span>
+    </div>
+    <p class="font-serif italic text-[1.3rem] text-ghee mb-6">Hand-rolled. Ghee-cooked. Made with love in Indiranagar.</p>
+    <div class="flex flex-wrap justify-center gap-6 mb-7">
+      <a href="#about" class="text-white/75 no-underline font-semibold text-[.95rem] hover:text-white">Our Story</a>
+      <a href="#signatures" class="text-white/75 no-underline font-semibold text-[.95rem] hover:text-white">Signatures</a>
+      <a href="#visit" class="text-white/75 no-underline font-semibold text-[.95rem] hover:text-white">Visit</a>
+      <button data-open-menu class="text-white/75 font-semibold text-[.95rem] hover:text-white">Menu</button>
+    </div>
+    <p class="text-[.82rem] text-white/45">© <span id="year"></span> Paratha House · Indiranagar, Bengaluru. All rights reserved.</p>
+  </footer>
+
+  <!-- ===================== MENU DRAWER ===================== -->
+  <div id="menu" aria-hidden="true" role="dialog" aria-label="Full menu" class="fixed inset-0 z-[100] flex justify-end pointer-events-none">
+    <div data-menu-backdrop class="absolute inset-0 bg-[rgba(28,15,6,.55)] backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+    <div data-menu-panel class="relative w-full max-w-[640px] h-full bg-cream shadow-lg2 flex flex-col translate-x-full transition-transform duration-[550ms] ease-[cubic-bezier(.22,1,.36,1)]">
+      <div class="flex items-start justify-between px-6 sm:px-8 pt-8 pb-5 border-b border-ink/10">
+        <div>
+          <p class="eyebrow text-terracotta">Pure Veg · North Indian</p>
+          <h2 class="font-serif font-medium text-[2.2rem] leading-none">The Menu</h2>
+        </div>
+        <button data-close-menu aria-label="Close menu" class="grid place-items-center w-11 h-11 rounded-full bg-creamdeep text-ink text-2xl leading-none transition-all duration-300 hover:bg-terracotta hover:text-white hover:rotate-90">&times;</button>
+      </div>
+      <nav id="menu-tabs" class="flex gap-2 overflow-x-auto px-6 sm:px-8 py-4 border-b border-ink/10 hide-scroll"></nav>
+      <div id="menu-body" class="flex-1 overflow-y-auto px-6 sm:px-8 py-6"></div>
+      <p class="px-6 sm:px-8 py-4 text-[.76rem] text-inksoft border-t border-ink/10">Prices in ₹. Taxes extra. Menu items subject to availability.</p>
+    </div>
+  </div>
+
+  <!-- ===================== ITEM MODAL ===================== -->
+  <div id="item" aria-hidden="true" role="dialog" aria-label="Dish detail" class="fixed inset-0 z-[120] grid place-items-center p-5 pointer-events-none">
+    <div data-item-backdrop class="absolute inset-0 bg-[rgba(20,11,4,.7)] backdrop-blur-md opacity-0 transition-opacity duration-400"></div>
+    <div data-item-card class="relative w-full max-w-[440px] bg-paper rounded-[28px] overflow-hidden shadow-lg2 opacity-0 scale-90 translate-y-5 transition-all duration-500 ease-[cubic-bezier(.34,1.56,.64,1)]">
+      <button data-close-item aria-label="Close" class="absolute top-4 right-4 z-10 grid place-items-center w-10 h-10 rounded-full bg-white/90 text-ink text-2xl leading-none transition-all duration-300 hover:rotate-90 hover:bg-white">&times;</button>
+      <div id="item-img" class="h-[260px] bg-cover bg-center"></div>
+      <div class="p-7">
+        <div id="item-tags" class="flex flex-wrap gap-1.5 mb-3"></div>
+        <h3 id="item-name" class="font-serif font-medium text-[1.9rem] leading-tight"></h3>
+        <p id="item-price" class="font-bold text-terracotta text-[1.2rem] mt-1 mb-4"></p>
+        <p id="item-desc" class="text-inksoft mb-5"></p>
+        <div id="item-meta" class="flex flex-wrap gap-2.5 mb-6"></div>
+        <button data-close-item class="w-full rounded-full bg-terracotta text-white font-semibold py-3.5 transition-all duration-300 hover:bg-terradark">Back to menu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
